@@ -97,16 +97,18 @@ public class Switch {
         //     System.out.printf("선택한 음료는 %s입니다. 금액은 %d원 입니다.", str, price);
         // }
 
-        int month;
-        int lastDay;
+        // int month;
+        // int lastDay;
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("희망하는 월을 입력 해주세요");
-        month = scanner.nextInt();
-        Calendar calendar = Calendar.getInstance();
-        calendar.set(2021, month-1, 1);
-        lastDay = calendar.getActualMaximum(Calendar.DATE);
+        // Scanner scanner = new Scanner(System.in);
+        // System.out.println("희망하는 월을 입력 해주세요");
+        // month = scanner.nextInt();
+        // Calendar calendar = Calendar.getInstance();
+        // calendar.set(2021, month-1, 1);
+        // lastDay = calendar.getActualMaximum(Calendar.DATE);
         
-        System.out.printf("%d월의 마지막 날은 %d일 입니다.", month, lastDay);
+        // System.out.printf("%d월의 마지막 날은 %d일 입니다.", month, lastDay);
+
+        
     }
 }
