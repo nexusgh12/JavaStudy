@@ -259,12 +259,59 @@ public class Array_Study {
         //     System.out.println(str.toUpperCase().charAt(0));
         // }
 
-        //문제) split 함수를 사용해 콤마를 기준으로 문자열을 문자열 배열로 만드시오.
+        //문제3) split 함수를 사용해 콤마를 기준으로 문자열을 문자열 배열로 만드시오.
         // String str = "a,b,c,d,e";
         // String[] strArr = str.split(",");
         // System.out.println(Arrays.toString(strArr));
 
-        
+        //문제4) String 배열에 "hello" 가 포함되어 있으면 "안녕하세요."를 출력하고, 그렇지 않으면 "안녕히가세요."를 출력하시오.
+
+        // String[] strArr = {"asdahelloasda","asdadafca", "asdadada"};
+        // for(String str : strArr){
+        //     if(str.contains("hello")){
+        //         System.out.printf("문자열: %s안녕하세요");
+        //     }
+        //     else{
+        //         System.out.printf("안녕히가세요");
+        //     }
+        // }
+
+        //다차원 배열
+        // int[][] arr = new int[2][3];
+        // int k = 10;
+        // for(int i = 0; i < arr.length; i++){
+        //     for(int j = 0; j < arr[i].length; j++){
+        //         arr[i][j] = k;
+        //         k+=10;
+        //         System.out.print(arr[i][j] + " ");
+        //     }
+
+        //     System.out.println();
+        // }
+
+        //문제1) arr의 원소를 출력하세요
+        // int[][] arr2 = {
+        //     {10, 20, 30},
+        //     {40, 50, 60}
+        // };
+
+        // for(int[] i : arr2){
+        //     System.out.println(Arrays.toString(i));
+
+        //문제2) arr의 원소를 출력하시오.
+        // int[][] arr = new int[3][];
+        // arr[0] = new int[2];
+        // arr[1] = new int[4];
+        // arr[2] = new int[1];
+
+        // int[][] arr2 = {
+        //     {10, 20},
+        //     {10, 20, 30, 40},
+        //     {10}
+        // };
+        // for(int i[] : arr2)
+        //     System.out.println(Arrays.toString(i));
+
     }
     // |  start  |    |    |    |    |    |  end  |
     // public static void quickSort(int array[], int start, int end) {
