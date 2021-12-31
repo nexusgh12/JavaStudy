@@ -1,3 +1,4 @@
+
 public class Animal{
     String globalName;
     int globalAge;
