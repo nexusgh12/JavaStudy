@@ -19,8 +19,10 @@ public class Package {
         f1.setPrice(1000000000);
         f2.setPrice(1100000000);
         f3.setPrice(1200000000);
+
         System.out.println(f1.getPrice());
         System.out.println(f2.getPrice());
         System.out.println(f3.getPrice());
+        
     }
 }
