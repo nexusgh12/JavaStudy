@@ -8,6 +8,13 @@ class Time {
     private int minute;
     private int second;
 
+    //생성자 생성
+    public Time(int hour, int minute, int second){
+        this.hour = hour;
+        this.minute = minute;
+        this.second = second;
+    }
+
     public int getHour(){ return hour; }
     
     public void setHour(int hour){
@@ -29,6 +36,9 @@ class Time {
             this.second = second;
     }
 
+     public void print(){
+        System.out.printf("현재 시간은 %d시 %d분 %d초 입니다.", getHour(), getMinute(), getSecond());
+    }
 }
 
 
@@ -36,8 +46,7 @@ class Time {
 
 public class Assignment2 {
     public static void main(String[] args) {
-        Time t = new Time();
-
-
+        Time t = new Time(12, 35, 30);
+        t.print();
     }
 }
