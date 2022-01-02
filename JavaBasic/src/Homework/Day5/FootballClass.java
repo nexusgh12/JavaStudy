@@ -5,8 +5,10 @@ import java.util.Random;
 
 public class FootballClass {
     public static void main(String[] args) {
-        String[] t1Players = {"손흥민", "H.케인", "루카스 모우라", "G.로셀소", "O.스킵", "P.호이비에르", "B.데이비스", "E.다이어", "C.로메로", "에메르송", "H.요리스"};
-        String[] t2Players = {"C.호날두", "E.카바니", "L.쇼", "프레드", "S.맥토미니", "B.페르난데스", "A.완 비사카", "H.맥과이어", "R.바란", "V.린델로프", "D.데헤아"};
+        String[] t1Players = { "손흥민", "H.케인", "루카스 모우라", "G.로셀소", "O.스킵", "P.호이비에르", "B.데이비스", "E.다이어", "C.로메로", "에메르송",
+                "H.요리스" };
+        String[] t2Players = { "C.호날두", "E.카바니", "L.쇼", "프레드", "S.맥토미니", "B.페르난데스", "A.완 비사카", "H.맥과이어", "R.바란",
+                "V.린델로프", "D.데헤아" };
 
         Team_Football t1 = new Team_Football("토트넘", "손흥민", t1Players);
         Team_Football t2 = new Team_Football("맨유", "C.호날두", t2Players);
@@ -33,24 +35,21 @@ class Player_Football {
         this.players = players;
     }
 
-    
-
     public String getPlayerName() {
-        return players[(int)(Math.random()*players.length)];
+        return players[(int) (Math.random() * players.length)];
     }
 
     public void setPlayerName(String playerName) {
         this.playerName = playerName;
     }
 
-    public String[] getPlayers(){
+    public String[] getPlayers() {
         return players;
     }
 
-    public void setPlayers(String[] players){
+    public void setPlayers(String[] players) {
         this.players = players;
     }
-
 
 }
 
@@ -157,7 +156,7 @@ class Football extends Team_Football {
     public void gameResult() {
         System.out.println();
         System.out.println("===========[ 경기 종료 ]===========");
-        System.out.printf("스코어 [%s 팀] %d : [%s 팀] %d%n%n", t1.getTeamName(), t1.getScore(), t2.getTeamName(),
+        System.out.printf("스코어 [%s] %d : [%s] %d%n%n", t1.getTeamName(), t1.getScore(), t2.getTeamName(),
                 t2.getScore());
 
         if (!winner.equals("무승부")) {
