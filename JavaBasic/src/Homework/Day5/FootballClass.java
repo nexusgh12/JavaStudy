@@ -156,14 +156,14 @@ class Football extends Team_Football {
 
     public void gameResult() {
         System.out.println();
-        System.out.println("-------------경기 결과-------------");
-        System.out.printf("스코어 [%s 팀] %d : [%s 팀] %d%n", t1.getTeamName(), t1.getScore(), t2.getTeamName(),
+        System.out.println("===========[ 경기 종료 ]===========");
+        System.out.printf("스코어 [%s 팀] %d : [%s 팀] %d%n%n", t1.getTeamName(), t1.getScore(), t2.getTeamName(),
                 t2.getScore());
 
         if (!winner.equals("무승부")) {
-            System.out.printf("승리팀은 %s입니다.%n", winner);
+            System.out.printf("===========[ 승리팀은 '%s'입니다. ]===========%n", winner);
         } else {
-            System.out.printf("경기 결과는 %s 입니다.%n", winner);
+            System.out.printf("===========[ 경기 결과는 '%s' 입니다. ]===========%n", winner);
         }
     }
 
