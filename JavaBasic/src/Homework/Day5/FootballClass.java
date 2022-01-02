@@ -22,13 +22,6 @@ public class FootballClass {
 class Player_Football {
     private String playerName;
 
-    public String getPlayerName() {
-        return playerName;
-    }
-
-    public void setPlayerName(String playerName) {
-        this.playerName = playerName;
-    }
 
     public Player_Football() {
 
@@ -37,6 +30,15 @@ class Player_Football {
     public Player_Football(String playerName) {
         this.playerName = playerName;
     }
+
+    public String getPlayerName() {
+        return playerName;
+    }
+
+    public void setPlayerName(String playerName) {
+        this.playerName = playerName;
+    }
+
 }
 
 class Team_Football extends Player_Football {
@@ -44,20 +46,20 @@ class Team_Football extends Player_Football {
     private String result;
     static String[] rsp = new String[] { "가위", "바위", "보" };
 
-    public String getTeamName() {
-        return teamName;
-    }
-
-    public void setPlayerName(String teamName) {
-        this.teamName = teamName;
-    }
-
     public Team_Football() {
 
     }
 
     public Team_Football( String teamName, String playerName) {
         super(playerName);
+        this.teamName = teamName;
+    }
+
+    public String getTeamName() {
+        return teamName;
+    }
+
+    public void setPlayerName(String teamName) {
         this.teamName = teamName;
     }
 
