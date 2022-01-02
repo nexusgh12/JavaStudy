@@ -35,7 +35,7 @@ class Computer{
         Mainboard mainboard = new Mainboard("Z690", "ASUS", 400000);
         Ram ram = new Ram("DDR5-6200", "Hynix", 500000);
         Disk disk = new Disk("980 Pro", "Samsung", 250000);
-        Power power = new Power("1000W Titanuim", "Antec", 300000);
+        Power power = new Power("1000W Titanium", "Antec", 300000);
         price = cpu.getPrice() + gpu.getPrice() + mainboard.getPrice() + ram.getPrice() + 
         disk.getPrice() + power.getPrice() ;
     }
