@@ -10,8 +10,8 @@ public class FootballClass {
         String[] t2Players = { "C.호날두", "E.카바니", "L.쇼", "프레드", "S.맥토미니", "B.페르난데스", "A.완 비사카", "H.맥과이어", "R.바란",
                 "V.린델로프", "D.데헤아" };
 
-        Team_Football t1 = new Team_Football("토트넘", "손흥민", t1Players);
-        Team_Football t2 = new Team_Football("맨유", "C.호날두", t2Players);
+        Team_Football t1 = new Team_Football("토트넘",  t1Players);
+        Team_Football t2 = new Team_Football("맨유", t2Players);
 
         Football football = new Football(t1, t2);
 
@@ -30,8 +30,7 @@ class Player_Football {
 
     }
 
-    public Player_Football(String playerName, String[] players) {
-        this.playerName = playerName;
+    public Player_Football(String[] players) {
         this.players = players;
     }
 
@@ -64,8 +63,8 @@ class Team_Football extends Player_Football {
 
     }
 
-    public Team_Football(String teamName, String playerName, String[] players) {
-        super(playerName, players);
+    public Team_Football(String teamName, String[] players) {
+        super(players);
         this.teamName = teamName;
     }
 
