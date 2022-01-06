@@ -1,4 +1,4 @@
-package inheritance.TV;
+package OOP.inheritance.TV;
 
 public class TV {
     private boolean power;

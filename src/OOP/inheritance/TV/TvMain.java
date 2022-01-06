@@ -1,4 +1,4 @@
-package inheritance.TV;
+package OOP.inheritance.TV;
 
 public class TvMain {
     public static void main(String[] args) {
