@@ -18,6 +18,6 @@ public class Book {
     public String toString(){
         int lenBookNo = 8 - (bookNo.length() - bookNo.getBytes().length);
 
-        return String.format("%-" +lenBookNo+ "s"+"%-10s"+ "%-6s%-8d%-10d%-10s",bookNo, bookTitle, bookAuthor, bookYear, bookPrice, bookPublisher);
+        return String.format("%s\t%s\t%s\t%d\t%d\t%s\t",bookNo, bookTitle, bookAuthor, bookYear, bookPrice, bookPublisher);
     }
 }

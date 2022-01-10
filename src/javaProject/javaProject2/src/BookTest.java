@@ -10,7 +10,7 @@ public class BookTest {
         System.out.println(book02.bookTitle.length()+" "+book02.bookTitle.getBytes().length);
         System.out.println(book03.bookTitle.length()+" "+book03.bookTitle.getBytes().length);
 
-        System.out.printf("%-4s%-20s%-7s%-6s%-7s%-6s%n", "도서번호", "도서명","저자","가격","발행일","출판사");
+        System.out.printf("%s\t%s\t\t%s\t%s\t%s\t%s\t%n", "도서번호", "도서명","저자","가격","발행일","출판사");
         System.out.println("-------------------------------------------------------------------------");
         System.out.println(book01.toString());
         System.out.println(book02.toString());
