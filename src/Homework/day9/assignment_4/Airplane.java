@@ -19,6 +19,18 @@ abstract class Airplane {
         this.arrivalDate = arrivalDate;
     }
     
+    public static void main(String[] args) {
+        Airplane a1 = new Airplane() {
+            
+       };
+       Calendar departure = Calendar.getInstance();
+       Calendar arrival = Calendar.getInstance();
+       departure.set(2022, 2, 1);
+       arrival.set(2022, 2, 2);
 
+       a1.setDepartureDate(departure);
+       a1.setArrivalDate(arrival);
+       
+    }
 
 }
