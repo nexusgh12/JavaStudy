@@ -1,0 +1,22 @@
+package Thread;
+
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
+
+class Pool {
+//	List<String> products = new LinkedList<>(Arrays.asList("연필", "지우개", "볼펜", "형광펜"));
+	List<String> products = new LinkedList<>(Arrays.asList("연필", "지우개", "볼펜", "항공편"));
+	public synchronized String get() throws InterruptedException{
+		while (products.size() == 0) {
+			wait();
+		}
+		return products.remove(0);
+		
+	}
+	
+	public synchronized void add(String value) {
+		products.add(value);
+		notifyAll();
+	}
+}

@@ -1,0 +1,20 @@
+package Thread;
+
+import java.util.List;
+
+class Pool {
+	List<String> products = new LinkedList<>(Arrays.asList("¿¬ÇÊ", "Áö¿ì°³", "º¼Ææ", "Çü±¤Ææ"));
+	
+	public synchronized String get() throws InterruptedException{
+		while (products.size() == 0) {
+			wait();
+		}
+		return products.remove(0);
+		
+	}
+	
+	public synchronized void add(String value) {
+		products.add(value);
+		notifyAll();
+	}
+}
