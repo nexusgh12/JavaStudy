@@ -1,0 +1,7 @@
+package Thread;
+
+public class MovieMain {
+public static void main(String[] args) {
+	Thread t1 = new Thread(new Movie());
+}
+}

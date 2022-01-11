@@ -1,0 +1,7 @@
+package Thread;
+
+public class FoodMain {
+	public static void main(String[] args) {
+		Food work1 = new Food();
+	}
+}
