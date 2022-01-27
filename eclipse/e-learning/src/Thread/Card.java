@@ -15,7 +15,7 @@ class Card {
 class Card2 {
 	private long balance = 1000;
 	
-	//¸Þ¼­µå¿¡ µ¿±âÈ­ 
+	//ï¿½Þ¼ï¿½ï¿½å¿¡ ï¿½ï¿½ï¿½ï¿½È­ 
 	public synchronized void draw(long amount) {
 		balance -= amount;
 	}
@@ -28,17 +28,17 @@ class Card2 {
 
 class DrawThread extends Thread{
 	Card card;
-	//Ä«µå¸¦ ¹Þ¾Æ¼­ ¸â¹öº¯¼ö¿¡ ÀúÀåÇØÁÜ
+	//Ä«ï¿½å¸¦ ï¿½Þ¾Æ¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	DrawThread(Card card){
 		this.card = card;	
 	}
 	
 	public void run() {
-		//card¶ó´Â °´Ã¼¸¦ ´©±º°¡°¡ µ¿½Ã¿¡ Á¢±Ù ÇÒ ¶§ µ¿±âÈ­ Ã³¸® ÇÏ°Ú´Ù. 
+		//cardï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ã¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½È­ Ã³ï¿½ï¿½ ï¿½Ï°Ú´ï¿½. 
 		synchronized(card) {
 			for(int i = 0; i < 10; i++) {
 				card.draw(10);
-				System.out.println(this.getName() + " Ãâ±Ý ÈÄ ÀÜ¾× " + card.getBalance());
+				System.out.println(this.getName() + " ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ü¾ï¿½ " + card.getBalance());
 			}
 			
 		}

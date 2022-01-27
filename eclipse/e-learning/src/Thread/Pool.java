@@ -5,18 +5,18 @@ import java.util.LinkedList;
 import java.util.List;
 
 class Pool {
-//	List<String> products = new LinkedList<>(Arrays.asList("¿¬ÇÊ", "Áö¿ì°³", "º¼Ææ", "Çü±¤Ææ"));
-	List<String> products = new LinkedList<>(Arrays.asList("¿¬ÇÊ", "Áö¿ì°³", "º¼Ææ", "Ç×°øÆí"));
-	public synchronized String get() throws InterruptedException{ //get()Àº product¿¡ ÀÖ´Â µ¥ÀÌÅÍ¸¦ »Ì¾Æ³»´Â ¸Þ¼­µå
+//	List<String> products = new LinkedList<>(Arrays.asList("ï¿½ï¿½ï¿½ï¿½", "ï¿½ï¿½ï¿½ì°³", "ï¿½ï¿½ï¿½ï¿½", "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"));
+	List<String> products = new LinkedList<>(Arrays.asList("ï¿½ï¿½ï¿½ï¿½", "ï¿½ï¿½ï¿½ì°³", "ï¿½ï¿½ï¿½ï¿½", "ï¿½×°ï¿½ï¿½ï¿½"));
+	public synchronized String get() throws InterruptedException{ //get()ï¿½ï¿½ productï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½Ì¾Æ³ï¿½ï¿½ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½
 		
-		while (products.size() == 0) {//»Ì¾Æ³¾ µ¥ÀÌÅÍ°¡ ¾øÀ»°æ¿ì Àá½Ã ´ë±â
+		while (products.size() == 0) {//ï¿½Ì¾Æ³ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
 			wait();
 		}
 		return products.remove(0);
 		
 	}
 	
-	public synchronized void add(String value) {	//add()´Â µ¥ÀÌÅÍ¸¦ »ðÀÔÇÏ´Â ¸Þ¼­µå
+	public synchronized void add(String value) {	//add()ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½
 		products.add(value);
 		notifyAll();
 	}
